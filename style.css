@@ -22,4 +22,312 @@
 
 body {
     font-family: 'Manrope', sans-serif;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 1.5rem;
+    background-image: url("./images/bg-pattern.svg");
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+    color: var(--Grayish-Blue-Text);
+}
+
+
+.heading-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    background-image: url("./images/pattern-circles.svg");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.heading-text p {
+    max-width: 15rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+main {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.main-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 5px 3px 3px rgba(0, 0, 0, 0.02);
+    border-radius: 0.8rem;
+}
+
+.pricing-card .card-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1.5rem;
+}
+
+.pricing-card .card-top p:first-child {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.pricing-card .card-top .slider {
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+input[type=range] {
+    width: 100%;
+}
+
+.amount {
+    font-size: 2.5rem;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.amount span {
+    margin-left: 0.8rem;
+    font-size: 1.2rem;
+    color: var(--Grayish-Blue-Text);
+    font-weight: 500;
+}
+
+.billing {
+    display: flex;
+    /* width: 19rem; */
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.billing p {
+    font-size: 0.7rem;
+    font-weight: 800;
+    align-self: center;
+    
+}
+
+.card-bottom {
+    width: 100%;
+    padding-top: 2rem;
+    padding: 2rem 1.5rem;
+    border-top: 2px solid hsla(222, 49%, 87%, 0.528);
+    text-align: center;
+}
+
+.perk {
+    color: var(--Grayish-Blue-Text);
+    margin-bottom: 1rem;
+}
+
+.perks {
+    margin-bottom: 1rem;
+}
+
+.card-bottom a {
+    display: inline-block;
+    background-color: var(--Dark-Desaturated-Blue-Text-CTA-Background);
+    color: white;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--Pale-Blue-CTA-Text);
+    border-radius: 5rem;
+}
+
+.switch {
+    margin: 0 0.5rem;
+    height: 100%;
+    width: 2.4rem;
+    display: inline-block;
+    position: relative;
+}
+
+.switch input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.switch-slider {
+    position: absolute;
+    inset: 0;
+    background-color: var(--Light-Grayish-Blue-Toggle-Backgroun);
+    transition: 0.4s;
+    -webkit-transition: .4s;
+    border-radius: 50px;
+}
+
+.switch-slider::before {
+    content: "";
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50px;
+    left: 0.2rem;
+    bottom: 0.2rem;
+}
+
+.switch input:checked ~ .switch-slider {
+    background-color: var(--Strong-Cyan-Slider-Backround);
+}
+
+input:focus + .switch-slider {
+    box-shadow: 0 0 1px var(--Strong-Cyan-Slider-Backround);
+}
+
+input:checked + .switch-slider::before {
+    -webkit-transform: translateX(1rem);
+    -ms-transform: translateX(1rem);
+    transform: translateX(1rem);
+}
+
+.price-slider {
+    border-radius: 50px;
+}
+
+
+/* range slider */
+
+
+input[type="range"] {
+    -webkit-appearance: none;
+    margin-right: 15px;
+    height: 0.5rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    background-color: var(--Light-Grayish-Blue-Empty-Slider-Bar);
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 2.2rem;
+    width: 2.2rem;
+    border-radius: 50%;
+    background: var(--Strong-Cyan-Slider-Backround);
+    cursor: cursor;
+    box-shadow: 0 10px 5px 0 hsla(174, 86%, 45%, 0.27);
+    transition: background .3s ease-in-out;
+}
+
+input[type=range]::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+}
+
+.attribution {
+    margin-top: auto;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.percent {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    color: hsl(15, 100%, 50%);
+    background-color: var(--Light-Grayish-Red-Discount-Background);
+    margin-left: 0.5rem; 
+}
+
+@media (min-width: 500px) {
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    .main-wrapper {
+        width: 35rem;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pricing-card .card-top {
+        position: relative;
+        padding: 3rem 2rem;
+    }
+
+    .pricing-card .card-top .amount {
+        position: absolute;
+        right: 2rem;
+        top: 3rem;
+        margin-bottom: 0;
+    }
+
+    .pricing-card .card-top p:first-child {
+        align-self: flex-start;
+    }
+
+    .card-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .perks {
+        margin-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .pricing-card .card-top .slider {
+        margin-top: 3rem;
+    }
+
+    body > main > div > div.pricing-card > div.card-top > div.billing > p:nth-child(1) {
+        align-self: center;
+    }
+
+    .pricing-card .card-topw, .pricing-card .card-bottom  {
+        padding: 3rem 2rem;
+    }
 }

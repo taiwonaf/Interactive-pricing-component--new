@@ -16,21 +16,55 @@
   </style>
 </head>
 <body>
-
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
+  <main>
+    <div class="main-wrapper">
+      <div class="heading-text">
+        <h1>Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial. No  credit card required</p>
+      </div>
+      <div class="pricing-card">
+        <div class="card-top">
+          <p>100k Pageviews</p>
+          <div class="slider">
+            <input type="range" min="1" max="100" value="16" class="price-slider" id="range-slider">
+          </div>
+          <div class="amount">
+            $16.00 <span>/ month</span>
+          </div>
+          <div class="billing">
+            <p>Monthly billing</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="switch-slider"></span>
+            </label>
+            <p>Yearly Billing</p>
+            <div class="percent">
+              -25%
+            </div>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="perks">
+            <div class="perk">
+              <img src="./images/icon-check.svg" alt="">
+              Unlimited websites
+            </div>
+            <div class="perk">
+              <img src="./images/icon-check.svg" alt="">
+              100% data ownership
+            </div>
+            <div class="perk">
+              <img src="./images/icon-check.svg" alt="">
+              Email reports
+            </div>
+          </div>
+          <div class="btn">
+            <a href="#">Start my trial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
